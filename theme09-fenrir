@@ -1,0 +1,512 @@
+<html>
+ 
+<head>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<!--
+Theme 09 "Fenrir"
+by balfiere
+you may edit this theme as mush as you like, but do not take off/change the placement the credit and do not redistribute your edited code ily
+-->
+ 
+<head>
+ 
+<title>{Title}</title>
+ 
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<!---If-->
+
+<meta name="if:Small cursor" content="1">
+ 
+<!--Colors-->    
+     
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Text" content="#aaaaaa"/>
+<meta name="color:Link" content="#7e7e7e"/>
+<meta name="color:sblinks" content="#7e7e7e"/>
+<meta name="color:sbtext" content="ffffff" />
+<meta name="color:sbborder" content="ffffff" />
+<meta name="color:sbbg" content="000000" />
+<meta name="color:descriptionbg" content="ffffff" />
+<meta name="color:linkbg" content="7e7e7e" />
+<meta name="color:linkhover" content="#f1f1f1"/>
+<meta name="color:scrollbar" content="f1f1f1" />
+<meta name="color:scrollbg" content="7e7e7e" />
+<meta name="color:postborder" content="7e7e7e">
+ 
+<!--Images-->
+ 
+<meta name="image:Background" content=""/>
+<meta name="image:Sidebar" content=""/>
+ 
+<!--Links-->
+ 
+<meta name="text:Link1" content="/" />
+<meta name="text:Link1 Title" content="" />
+ 
+<meta name="text:Link2" content="/" />
+<meta name="text:Link2 Title" content="" />
+ 
+<meta name="text:Link3" content="/" />
+<meta name="text:Link3 Title" content="" />
+ 
+<meta name="text:Link4" content="/" />
+<meta name="text:Link4 Title" content="" />
+ 
+<meta name="text:Link5" content="/" />
+<meta name="text:Link5 Title" content="" />
+ 
+<meta name="text:Link6" content="/" />
+<meta name="text:Link6 Title" content="" />
+     
+<style type="text/css">
+
+{block:ifSmallcursor}
+
+body, a, a:hover {
+    cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur),     progress !important;
+    }
+
+{/block:ifSmallcursor}
+ 
+/* --- SCROLLBAR ---*/
+     
+::-webkit-scrollbar {height: auto;width: 5px;}
+::-webkit-scrollbar-thumb {background-color:{color:scrollbar};}
+::-webkit-scrollbar-track{background-color:{color:scrollbg};}
+ 
+/* --- BODY ---*/
+         
+body {
+    background:{color:background};
+    background-image:url({image:Background});
+    background-attachment:fixed;
+    margin:0px;
+    color:{color:text};
+    font-family: bookman old style;
+    font-size:10px;
+    line-height:100%;
+    }
+ 
+blockquote {
+    border-left:1px solid {color:link};
+    padding-left:2px;
+    margin:5px;
+    }
+ 
+a {
+    color:{color:link};
+    text-decoration:none;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    }
+ 
+a:hover {
+    text-decoration:none;
+    color:{color:linkhover};
+    }
+ 
+img {
+    none;
+    }
+
+h1 {
+    font-size:20px;
+    line-height:120%;
+    font-style:none;
+    text-align:left;
+    font-weight:normal;
+    }
+ 
+h2 {
+    font-size:10px;
+    text-transform:none;
+    font-weight:normal;
+    }
+   
+ul.tags {
+display: inline;
+margin: 0;
+padding: 0;
+}
+ 
+ul.tags li {
+display: inline;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+ 
+ul.tags li:after {
+content: ", ";
+color: #aaa;
+}
+ 
+ul.tags li:last-child:after {
+content: "";
+}
+ 
+ul.info {
+display: inline;
+margin: 0;
+padding: 0;
+}
+ 
+ul.info li {
+display: inline;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+ 
+ul.info li:after {
+content: " | ";
+color: #aaa;
+}
+ 
+ul.info li:last-child:after {
+content: "";
+}
+ 
+/* --- POSTS ---*/
+ 
+ 
+#entries {
+    padding:10px;
+    width:600px;
+    margin-left:520px;
+    }
+ 
+#post {
+    width:500px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-style:none;
+    }
+ 
+#notes {
+    font-family:garamond;
+    text-transform:lowercase;
+    font-size:10px;
+    text-align:left;
+    }
+ 
+.info {
+    padding:5px;
+    margin-top:5px;
+    margin-bottom:0px;
+    text-transform: none;
+    font-size:10px;
+    margin-left:0px;
+    opacity:1;
+    border-top:solid 1px {color:postborder};
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -ms-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+    }
+       
+.tags {
+    opacity:1;
+    letter-spacing:1px;
+    text-transform:lowercase;
+    font-style:italic;
+    font-size:10px;
+    margin-left:0px;
+    margin-top:0px;
+    text-align:center;
+    }
+
+.left {
+    text-align:left;
+    float:left;
+    }
+    
+.right {
+    text-align:right;
+    }
+ 
+/* --- AUDIO ---*/
+           
+#audio {
+    margin-bottom:5px;
+    width:500px;
+    height:justify;
+    }
+   
+.player2 {
+    width:auto;
+    height:auto;
+    float:left;
+    padding-right:10px;
+    }
+ 
+.track {
+    text-transform:lowercase
+    line-height:15px;
+    padding:10px;
+    }
+     
+/* --- SIDEBAR ---*/
+ 
+#sidebar {
+    width:350px;
+    height:100%;
+    position:fixed;
+    padding:0px;
+    top:-3px;
+    left:100px;
+    z-index:9999;
+    overflow:hidden;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+    
+#sidebarimage {
+    width:300px;
+    height:auto;
+    position:fixed;
+    top:-3px;
+    left:105px;
+    z-index:1;
+    overflow:hidden;
+    background:{color:sbbg};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+    
+#sidebarimage img {
+    width:300px;
+    height:auto;
+    left:105px;
+    top:-3px;
+    float:left;
+    z-index:1;
+    position:fixed;
+    overflow:hidden;
+    padding:3px;
+    background:{color:sbbg};
+    border:3px double {color:sbborder};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+   
+.links {
+    width:304px;
+    margin-top:10px;
+    margin-left:3px;
+    padding:5px;
+    opacity:.8;
+    position:fixed;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:11px;
+    line-height:140%;
+    z-index:9997;
+    color:{color:sblinks};
+    background-color:{color:linkbg};
+    border:1px solid {color:sbborder};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+    
+.links a {
+    color:{color:sblinks};
+    }
+ 
+.links a:hover {
+    color:{color:linkhover};
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+   
+.description {
+    color:{color:sbtext};
+    position:relative;
+    width:150px;
+    margin-left:-20px;
+    margin-top:70px;
+    background:{color:descriptionbg};
+    height:auto;
+    padding:8px;
+    font-size:10px;
+    text-align:center;
+    border:1px solid {color:sbborder};
+    opacity:0;
+    letter-spacing:0px;
+    line-height:120%;
+    z-index:99999999999;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+   
+#sidebar:hover .description{
+    opacity:0.8;
+    margin-top:120px;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    }
+ 
+/* --- ASKS ---*/
+     
+#asker {
+    float:left;
+    margin-right:5px;
+    }
+     
+#q {
+    text-transform:lowercase;
+    letter-spacing:1px;
+    padding-bottom:3px;
+    }
+     
+#question {
+    font-style:italic;
+    font-size:10px;
+    }
+     
+#answer {
+    text-transform:uppercase;
+    font-size:10px;
+    }
+    
+/* --- TOOLTIPS --- */
+
+#s-m-t-tooltip {
+    opacity:1;
+    padding:4px;
+    margin:8px;
+    background-color:{color:Background};
+    border:1px solid {color:sbborder};
+    letter-spacing:1px;
+    text-transform:lowercase;
+    z-index:9999999999;
+    }
+       
+{CustomCSS}
+ 
+   
+</style>
+   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+ 
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>   
+   
+</head>
+ 
+ 
+<body>
+<div id="sidebar">
+    <div id="sidebarimage"><img src="{image:Sidebar}"></div>
+    <center><div class="links">
+{block:PreviousPage}<a href="{PreviousPage}">-</a>{/block:PreviousPage}
+{block:ifLink1}<a title="{text:Link1 Title}" href="{text:Link1}">I</a>{/block:ifLink1}
+{block:ifLink2}<a title="{text:Link2 Title}" href="{text:Link2}">II</a>{/block:ifLink2}
+{block:ifLink3}<a title="{text:Link3 Title}" href="{text:Link3}">III</a>{/block:ifLink3}
+{block:ifLink4}<a title="{text:Link4 Title}" href="{text:Link4}">IV</a>{/block:ifLink4}
+{block:ifLink5}<a title="{text:Link5 Title}" href="{text:Link5}">V</a>{/block:ifLink5}
+{block:ifLink6}<a title="{text:Link6 Title}" href="{text:Link6}">VI</a>{/block:ifLink6}
+{block:NextPage}<a href="{NextPage}">+</a>{/block:NextPage}
+    </div></center>
+    <center><div class="description">{Description}</div></center>
+</div>
+ 
+<div id="entries">{block:Posts}<div id="post">
+     
+{block:Text}<h1>{block:Title}{Title}{/block:Title}</h1>{Body}{/block:Text}
+     
+{block:Photo}{LinkOpenTag}<img src="{PhotoURL-500}">{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+     
+{block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+     
+{block:Quote}<h1>{Quote}</h1>{block:Source} —{Source}{/block:Source}{/block:Quote}
+     
+{block:Link}<h1><a href="{URL}" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}{/block:Link}
+     
+{block:Chat}{block:Title}<h1>{Title}</h1>{/block:Title}{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}{/block:Chat}
+
+{block:Audio}<div id="audio">
+    <div class="player2">
+        {AudioPlayerWhite}
+    </div>
+<div class="track">
+    {block:TrackName}"{TrackName}"{/block:TrackName}
+    {block:Artist} —{Artist}{/block:Artist}
+    {block:Album}, from <em>{Album}</em>{/block:Album}
+</div>
+{Caption}</div>
+{/block:Audio}
+     
+{block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+     
+{block:Answer}<div id="asker">{Asker} asked:</div> <div id="q">{Question}</div> {Answer}{/block:Answer}
+     
+<div class="info">
+<div class="left">
+{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+| <a href="{Permalink}">{NoteCount}</a></div>
+
+<ul class="info">
+<div class="right">
+{block:RebloggedFrom}<li><a href="{ReblogParentURL}">{ReblogParentName}</a></li>{/block:RebloggedFrom}
+{block:ContentSource}<li><a href="{SourceURL}"> <a href="{SourceURL}"> <a href="{SourceURL}">{SourceLink}</a></a></li>{/block:ContentSource}
+</div>
+</ul>
+
+ 
+{block:HasTags}<p>
+     <ul class="tags"><div class="tags">
+        {block:Tags}
+        <li>
+            <a href="{TagURL}">{Tag}</a>
+        </li>
+        {/block:Tags}
+     </div></ul>
+</p>{/block:HasTags}
+
+</div>
+</div>
+
+
+ 
+{/block:Posts}
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+{/block:Posts}</div></div>
+     
+<div style="font-family:garamond; font-size: 12px; letter-spacing: 1px; float: right; position: fixed; bottom: 5px; right: 5px; text-transform:uppercase;"><a title="credit" href="http://balfiere.tumblr.com">✂</a></div>
+
+
+     
+</body>
+ 
+</html>
