@@ -975,7 +975,7 @@ $(document).ready(function(){
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
-       gutter: '5px',
+       gutter: '4px',
        borderRadius: '0px',
        photoset: '.photo-slideshow',
        photoWrap: '.photo-data',
@@ -1004,7 +1004,7 @@ $(document).ready(function(){
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
-       gutter: '5px',
+       gutter: '4px',
        photoset: '.photo-slideshow',
        photoWrap: '.photo-data',
        photo: '.pxu-photo'
@@ -1035,7 +1035,7 @@ $(document).ready(function(){
        $newElems.find('.photo-slideshow').pxuPhotoset({
            lightbox: true,
            rounded: false,
-           gutter: '5px',
+           gutter: '4px',
            photoset: '.photo-slideshow',
            photoWrap: '.photo-data',
            photo: '.pxu-photo'
