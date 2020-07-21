@@ -936,8 +936,6 @@ q {
 {block:PostNotes}<div id="notes">{PostNotes-16}</div>{/block:PostNotes}
 {/block:PermalinkPage}
  
-{block:PostNotes}<div id="notes">{PostNotes-16}</div>{/block:PostNotes}
- 
 </div>
 {/block:Posts}
 </div>
